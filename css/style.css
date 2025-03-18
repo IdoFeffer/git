@@ -1,31 +1,29 @@
 body {
-    background-color: black;
+  background-color: black;
 }
 
 .header {
-    color: #fff;
+  color: #fff;
 }
 
 .ball {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-
-
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: 1s;
 }
 
 .ball1 {
-    transition: 1s;
-    background-color: aqua;
-    margin-bottom: 20px;
+  background-color: aqua;
+  margin-bottom: 20px;
 }
 
-.ball2{
-    margin: 0 auto;
-    background-color: bisque;
-
+.ball2 {
+    
+  margin: 0 auto;
+  background-color: bisque;
 }
