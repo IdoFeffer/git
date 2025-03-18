@@ -18,12 +18,15 @@ body {
 }
 
 .ball1 {
-  background-color: aqua;
+  background-color: rgb(0, 255, 255);
   margin-bottom: 20px;
 }
 
 .ball2 {
-    
-  margin: 0 auto;
   background-color: bisque;
+  margin-bottom: 20px;
+}
+
+.ball3{
+  background-color: aliceblue;
 }
