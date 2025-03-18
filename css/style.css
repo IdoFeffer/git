@@ -5,3 +5,14 @@ body {
 .header {
     color: #fff;
 }
+
+.ball {
+    text-align: center;
+    place-content: center;
+    margin: 0 auto;
+    
+    background-color: aqua;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
