@@ -6,15 +6,26 @@ body {
     color: #fff;
 }
 
-.ball1 {
+.ball {
     text-align: center;
     margin: 0 auto;
     font-size: 22px;
     font-weight: bold;
-    
-    transition: 1s;
-    background-color: aqua;
     border-radius: 50%;
     width: 100px;
     height: 100px;
+
+
+}
+
+.ball1 {
+    transition: 1s;
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+.ball2{
+    margin: 0 auto;
+    background-color: bisque;
+
 }
