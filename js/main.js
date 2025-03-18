@@ -19,7 +19,10 @@ function onBallClick(elBall, maxDiameter) {
   elBall.style.backgroundColor = getRandomColor()
 }
 
-function onBall3Click() {
+function onBall3Click(elBall) {
+// elBall.style.width = (elBall.offsetWidth + 20) + 'px'
+// elBall.style.height = (elBall.offsetWidth + 20) + 'px'
+
   var ball1 = gBalls[0]
   var ball2 = gBalls[1]
 
@@ -57,23 +60,60 @@ function onBall4Click() {
   ball2.style.width = tempWidth - reduceSize + "px"
   ball2.style.height = tempWidth - reduceSize + "px"
 
-  if (tempBallSize <= 100){
+  if (tempBallSize <= 100) {
     ball1.style.width = 100 + "px"
     ball1.style.height = 100 + "px"
     ball1.innerText = ball1.offsetWidth
   }
-  if (tempBallSize <= 100){
+  if (tempBallSize <= 100) {
     ball2.style.width = 100 + "px"
     ball2.style.height = 100 + "px"
     ball2.innerText = ball2.offsetWidth
   }
 }
 
-function onBall5Click(){
-    var elBody = document.querySelector('.ball5')
-    elBody.style.backgroundColor = getRandomColor()
+function onBall5Click() {
+  var elBody = document.querySelector(".ball5")
+  elBody.style.backgroundColor = getRandomColor()
 }
 
-function onBall6Click(){
-    
+function onBall6Click() {
+  // location.reload() // First solustion
+
+  // Second solustion
+  var backgroundColor = document.querySelector(".ball5")
+  var balls = document.querySelectorAll(".ball")
+
+  balls.forEach((ball) => {
+    ball.style.width = 100 + "px"
+    ball.style.height = 100 + "px"
+    ball.innerText = 100
+  })
+  backgroundColor.style.backgroundColor = "black"
+}
+
+var intervalId
+// var ball6 = document.querySelector(".ball6")
+var count = 0
+
+// ball6.addEventListener("mouseenter", onBall6Hover)
+// ball6.addEventListener("mouseleave", onBall6Leave)v
+
+function onBall6Hover() {
+  intervalId = setInterval(() => {
+    if (count >= 10) {
+      clearInterval(intervalId)
+      return
+    }
+    var balls = document.querySelectorAll(".ball")
+    onBallClick(balls[0])
+    onBallClick(balls[1])
+    onBall3Click()
+    onBall4Click()
+    count++
+  }, 2000)
+}
+
+function onBall6Leave(){
+  clearInterval(intervalId)
 }
